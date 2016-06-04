@@ -1,0 +1,50 @@
+; Exercise 1.3
+
+; Goal of this exercise is:
+; Create a procedure that takes in three numbers as arguments
+; Return the sum of the squares of the two highest numbers
+(define (sum-squares-two-highest a b c)
+	(define (sum-squares x y)
+		(+ (square x) (square y)))
+	(cond ((and (< a b) (< a c)) (sum-squares b c))
+		  ((and (< b a) (< b c)) (sum-squares a c))
+		  (else (sum-squares a b))))
+
+; Unit tests
+(define (test-exercise)
+	(define total-tests 0)
+	(define successes 0)
+	(define failures 0)
+	(define (test-set a b c answer)
+		(test-case a b c answer)
+		(test-case a c b answer)
+		(test-case b a c answer)
+		(test-case b c a answer)
+		(test-case c a b answer)
+		(test-case c b a answer))
+	(define (test-case x y z answer)
+		(cond ((= (sum-squares-two-highest x y z) answer)
+				(display-multiple "Success: " x " , " y " , " z)
+				(set! successes (+ successes 1)))
+			  (else
+				(display-multiple "Failure: " x " , " y " , " z)
+				(set! failures (+ failures 1))))
+		(set! total-tests (+ total-tests 1))
+		(newline))
+	(define (display-results)
+		(display-multiple "Total tests: " total-tests)
+		(newline)
+		(display-multiple "Successes: " successes)
+		(newline)
+		(display-multiple "Failures: " failures)
+		(newline))
+	(test-set 0 0 0 0)
+	(test-set 0 1 2 5)
+	(test-set 1 2 3 13)
+	(test-set -1 -2 -3 5)
+	(test-set 1 1 1 2)
+	(test-set 1 2 2 8)
+	(display-results))
+			
+(define (display-multiple . args)
+	(for-each display args))
