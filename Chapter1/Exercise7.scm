@@ -23,12 +23,12 @@
 ; find the square root.
 
 ; Small-number test results
-; Old method: error that is many times larger than C (on the order of 10^-15)
-; New method: error that is many times less than C (on the order of 10^4)
+; Old method: error that is many times larger than C (on the order of 10^4 time the size)
+; New method: error that is many times less than C (on the order of 10^-15 times the size)
 
 ; Large-number test results
 ; Old method: infinite loop- no answer
-; New method: error that is many time less than C (order of magnitude 10^-11)
+; New method: error that is many time less than C (order of magnitude 10^-11 times the size)
 
 (define (new-sqrt x)
 	(define (sqrt-iter first-guess? previous-guess guess)
