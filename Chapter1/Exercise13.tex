@@ -1,0 +1,96 @@
+\documentclass{report}
+\begin{document}
+	\paragraph{Exercise 1.13}
+	Prove that:
+	\newline
+	\begin{math}
+		Fib(n) \; is \; the \; closest \; integer \; to \;
+		\frac{\phi^n}{\sqrt{5}}, \; where \;
+		\phi \, = \, \frac{(1+\sqrt{5})}{2}
+	\end{math}
+	%separate title from proof
+	\newline
+	\newline
+	\begin{math}
+		Let \; \psi \, = \, \frac{(1 - \sqrt{5})}{2}
+		\newline
+		Prove \;
+		Fib(n) = \frac{(\phi^n - \psi^n)}{\sqrt{5}}
+		\; (hint \; from \; book)
+		\newline
+		\newline
+		Proof \; by \; Induction:
+		\newline
+		Base \; Case:
+		\newline
+		n = 0: \;
+		Fib(0) \; = \; \frac{(\phi^0 - \psi^0)}{\sqrt{5}} \;
+		= \; 0
+		\; (Fib(0) \; = \; 0)
+		\newline
+		\newline
+		Induction \; Step:
+		\newline
+		Assume \; Fib(k) \; = \;
+		\frac{(\phi^k - \psi^k)}{\sqrt{5}}
+		\newline
+		Prove \;
+		Fib(k+1) = \frac{(\phi^{k+1} - \psi^{k+1})}{\sqrt{5}}
+		\newline
+		Fib(k+1) = Fib(k) + Fib(k-1)
+		\; (By \; definition \; of \; Fibonnaci \; series)
+		\newline
+		Fib(k+1) = \frac{(\phi^{k} - \psi^{k})}{\sqrt{5}}
+		+ \frac{(\phi^{k-1} - \psi^{k-1})}{\sqrt{5}}
+		\newline
+		Fib(k+1) = \frac{(\phi^{k-1} \phi -
+		\psi^{k-1} \psi)}{\sqrt{5}}
+		+ \frac{(\phi^{k-1} - \psi^{k-1})}{\sqrt{5}}
+		\newline
+		Fib(k+1) = \frac{\phi^{k-1}(\phi + 1) -
+			\psi^{k-1}(\psi + 1)}{\sqrt{5}}
+		\newline
+		Fib(k+1) = \frac{\phi^{k-1}\phi^2 - 
+			\psi^{k-1}\psi^2}{\sqrt{5}}
+		\; (\phi^2 = \phi + 1
+		\; and \; \psi^2 = \psi + 1)
+		\newline
+		Fib(k+1) = \frac{(\phi^{k+1} - \psi^{k+1})}{\sqrt{5}}
+		\newline
+		\newline
+		We \; have \; shown \; that \;
+		Fib(n) = \frac{\phi^n}{\sqrt{5}}
+		\; minus \; a \; factor \; of \;
+		\frac{\psi^n}{\sqrt{5}}
+		\newline
+		We \; will \; now \; show \; that \; |\frac{\psi^n}{\sqrt{5}}| < 0.5 \; which \; would
+		\; mean \; that \; Fib(n) \; is \; the \; closest \;
+		integer \; to \frac{\phi^n}{\sqrt{5}}
+		\newline
+		\newline
+		Proof \; by \; Induction:
+		\newline
+		Base \; Case:
+		\newline
+		n = 0: \; |\frac{\psi^0}{\sqrt{5}}|
+		= |\frac{1}{\sqrt{5}}| < 0.5
+		\newline
+		\newline
+		Induction \; Step:
+		\newline
+		Assume |\frac{\psi^k}{\sqrt{5}}| < 0.5
+		\newline
+		Prove |\frac{\psi^{k+1}}{\sqrt{5}}| < 0.5
+		\newline
+		|\frac{\psi^{k+1}}{\sqrt{5}}| =
+		|\psi| |\frac{\psi^k}{\sqrt{5}}|
+		< |\psi| * 0.5
+		\; (from \; induction \; assumption)
+		\newline
+		|\psi| * 0.5 < 0.5
+		\newline
+		|\psi| < 1
+		\newline
+		| \frac{1 - \sqrt{5}}{2} | \approx 0.618 < 1
+	\end{math}
+\end{document}
