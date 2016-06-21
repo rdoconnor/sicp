@@ -1,0 +1,8 @@
+(define (fast-exp b n)
+	(define (fast-exp-iter temp-b counter product)
+		(cond ((= counter 0) product)
+			  ((even? counter) (fast-exp-iter (square temp-b) (/ counter 2) product))
+			  (else (fast-exp-iter temp-b (- counter 1) (* temp-b product)))))
+	(define (even? x)
+		(= (remainder x 2) 0))
+	(fast-exp-iter b n 1))
