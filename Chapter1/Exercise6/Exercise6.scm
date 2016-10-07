@@ -21,8 +21,8 @@
 	
 ; The result of using new-if is indefinite recursion that results in the max recursion depth being reached.
 ; This is because when new-if is called with the arguments of (good-enough? guess x), guess, and (sqrt-iter (improve guess x) x), all three
-; of which are evaluated on each call to new-if. Since the call to sqrt-iter is recursive and will result in this new-if (and thus sqrt-iter) 
-; being called again, this results in unterminated recursion.
+; of these are evaluated on each call to new-if with applicative order evaluation. Since the call to sqrt-iter is recursive and will result 
+; in this new-if (and thus sqrt-iter) being called again, this results in unterminated recursion.
 ; With the regular if (which is a special form), there is a terminating condition for the recursion, because the call to sqrt-iter is only made if the
 ; call to good-enough? returns false. Given that Newton's method tends to converge towards an answer that is eventually "good enough",
 ; we expect good-enough? to eventually return true, meaning that the recursion terminates and returns an answer without making more calls

@@ -13,10 +13,10 @@
 ; root is being calculated, the lack of precision results in a convergence to an answer that doesn't satisfy the fixed threshold in the old method
 ; resulting in an infinite loop.
 
-; By comparing the rate of convergence (by finding the absolute of the difference of the last two guesses) to a fixed fraction of the most recent
-; guess, the new method is able to overcome both of the issues outlined above. The fact that it avoids both the relatively large errors associated
-; with calculating the square root of extremely small numbers and the precision-induced infinite loops associated with extremely large numbers is
-; demonstrated in the tests below.
+; By comparing the rate of convergence (by finding the absolute value of the difference of the last two guesses) to a fixed fraction of the most
+; recent guess, the new method is able to overcome both of the issues outlined above. The fact that it avoids both the relatively large errors
+; associated with calculating the square root of extremely small numbers and the precision-induced infinite loops associated with extremely large
+; numbers is demonstrated in the tests below.
 ; The tests compare the differences in the methods for calculating the square root of 0.00000007 and a number on the order of 6e64.
 ; Note in the context of the test results I refer to "error" as the difference in the square of the calculated square root answer and the number
 ; being square rooted relative to the number being square rooted. So error = (guess answer - C) / C, where C is the number for which we're trying to
