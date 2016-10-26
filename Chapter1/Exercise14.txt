@@ -1,9 +1,0 @@
-TODO: Draw tree representing process
-
-Orders of growth:
-
-Functions of n, which is amount of change
-
-Space: log(n)
-
-Steps: n
