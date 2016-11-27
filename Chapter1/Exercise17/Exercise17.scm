@@ -1,4 +1,5 @@
 ; Exercise 1.17
+; Log(n) multiplication with recursive process
 
 (define (new-mult a b)
 	(cond ((= b 0) 0)

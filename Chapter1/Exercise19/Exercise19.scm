@@ -1,4 +1,5 @@
 ; Exercise 1.19
+; Fib calculation in log(n) time
 
 (define (fib n)
 	(fib-iter 1 0 0 1 n))

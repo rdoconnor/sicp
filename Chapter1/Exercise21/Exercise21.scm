@@ -1,4 +1,5 @@
 ; Exercise 1.21
+; Using smallest-divisor functionality that is central to naive prime number detector
 
 (define (smallest-divisor n)
 	(find-divisor n 2))

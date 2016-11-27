@@ -1,4 +1,5 @@
 ; Exercise 1.18
+; Log(n) multiplication with iterative process
 
 ; Loop invariant: a*b + k
 ; if b = 0 then answer = k
