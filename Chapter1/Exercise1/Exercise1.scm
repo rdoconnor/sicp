@@ -1,4 +1,5 @@
 ; Exercise 1.1
+; This exercise involves typing expressions into the scheme interpreter and observing the return value.
 
 10
 ;	10
