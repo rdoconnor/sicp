@@ -1,4 +1,5 @@
 ; Exercise 1.5
+; Describe the difference in behavior when the test procedure is run with an applicative-order interpreter vs a normal-order inerpreter.
 
 (define (p) (p))
 

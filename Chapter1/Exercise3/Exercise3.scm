@@ -2,7 +2,7 @@
 
 ; Goal of this exercise is:
 ; Create a procedure that takes in three numbers as arguments
-; Return the sum of the squares of the two highest numbers
+; Return the sum of the squares of the two highest numbers 
 (define (sum-squares-two-highest a b c)
 	(define (sum-squares x y)
 		(+ (square x) (square y)))
