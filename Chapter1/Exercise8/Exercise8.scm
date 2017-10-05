@@ -1,4 +1,5 @@
 ; Exercise 1.8
+; Implementing Newton' method for finding the cube root of a number
 
 (define (cube-root x)
 	(define (cube-iter first-guess? previous-guess guess)

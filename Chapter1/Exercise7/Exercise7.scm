@@ -1,4 +1,5 @@
 ; Exercise 1.7
+; Understanding issues of numerical methods with very small and very large numbers
 
 ; For convenience in this discussion, I refer to the method outlined in the example in the book, which compares the recent
 ; guess to a fixed number, as the "old method". I refer to the method specified in this exercise, which compares the difference

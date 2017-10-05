@@ -4,7 +4,7 @@
 (define (print-triangle n)
 	(define (recursively-print row col)
 		; print number
-		(display (find-value row col) " ")
+		(display (find-value row col))
 		; new-line if end of row
 		(cond ((= row col) (newline))
 			  (else (display " ")))

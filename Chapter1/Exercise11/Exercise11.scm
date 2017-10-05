@@ -1,6 +1,6 @@
 ; Exercise 1.11
 
-; Procedure for:
+; Write procedure for:
 ; f(n) = n if n < 3
 ; f(n) = f(n-1) + 2*f(n-2) + 3*f(n-3) if n >= 3
 

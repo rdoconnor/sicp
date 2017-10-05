@@ -1,4 +1,5 @@
 ; Exercise 1.6
+; Understanding why the implementation of "if" must be a special form and can't be an ordinary procedure.
 
 (define (new-if predicate then-clause else-clause)
 	(cond (predicate then-clause)
